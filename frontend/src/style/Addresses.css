@@ -1,0 +1,194 @@
+.addresses-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 10000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #0fa60a;
+  background-color: #f1e9de;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem 2rem;
+  padding-top: 1rem;
+  overflow: hidden;
+  gap: 0.5rem;
+  height: 80%;
+  width: 80%;
+}
+
+.add-address-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem 2rem;
+  overflow: hidden;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+
+.add-address-form {
+  display: flex;
+  flex-direction: column;
+}
+.city-state-zip {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Layout for City, State, and Zip */
+.city-state-zip .input {
+  width: 30%;
+  justify-content: space-evenly;
+}
+
+/* Container for the Address List */
+.address-list-container {
+  text-align: left;
+  display: flex;
+  padding-right: 0.5rem;
+  min-height: 70%;
+  /* max-height: 70%; */
+  width: 100%;
+  flex-direction: column;
+  overflow: scroll;
+  gap: 0.5rem;
+}
+.address-list-container::-webkit-scrollbar {
+  width: 12px; /* Set the width of the vertical scrollbar */
+  height: 0; /* Set the height of the horizontal scrollbar */
+  background-color: transparent;
+}
+
+.address-list-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.address-list-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.address-list-container h3 {
+  margin-top: 0;
+  align-self: center;
+}
+
+/* Individual Address Styling */
+.address-list-container .address {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  border-radius: 8px;
+  font-size: 1rem;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.address-list-container .address > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-list-container > div:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.address-list-container > div span {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Delete Button Styling */
+.address-list-container button {
+  margin: 0;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 16px;
+  width: 20%;
+  height: 50%;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.address-list-containerbutton:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+.address-list-container button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #e74c3c;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-content {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  padding-top: 1rem;
+  /* align-items: center; */
+  gap: 1rem;
+  height: 100%;
+}
+
+.vertical {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-button {
+  display: flex;
+  align-self: flex-start;
+  margin: 0;
+  padding: 0;
+  color: grey;
+  font-size: 2rem;
+  font-weight: 400;
+  border-radius: 10rem;
+  background-color: transparent;
+}
+
+.close-button:hover {
+  background-color: transparent;
+  outline: 0 !important;
+}
+
+.close-button:active {
+  outline: 0 !important;
+  border-color: transparent;
+}
+
+.popup-header .invisible {
+  display: flex;
+}
+
+.address {
+  text-transform: capitalize;
+}
+
+@media (max-width: 767px) {
+  .popup-content {
+    flex-direction: column;
+  }
+}

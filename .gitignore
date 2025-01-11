@@ -1,0 +1,5 @@
+# Ignore the 'package' folder inside the 'backend' folder
+/backend/package/
+
+# Ignore any .vscode folder (including subdirectories)
+.vscode/
