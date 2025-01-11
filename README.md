@@ -57,13 +57,7 @@ cd shopper
    poetry shell
    ```
 
-4. Copy `.env.example` and modify the environment variables:
-
-   ```bash
-   cp .env.example .env
-   ```
-
-5. Start the FastAPI server:
+4. Start the FastAPI server:
 
    ```bash
    poetry run uvicorn app.main:app --reload
